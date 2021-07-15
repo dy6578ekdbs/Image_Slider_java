@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>Slider</title>
+</head>
+<body>
+
+    <div style="overflow: hidden;"> <!--스크롤바 안생김 -->
+
+        <div class="container">
+
+            <div class="inner">
+                <img src="img1.jpg">
+            </div>
+
+            <div class="inner">
+                <img src="img2.jpg">
+            </div>
+
+            <div class="inner">
+                <img src="img3.jpg">
+            </div>
+
+        </div>
+
+    </div>
+
+    <button class="bt1">1</button>
+    <button class="bt2">2</button>
+    <button class="bt3">3</button>
+    
+    <script>
+        document.querySelector('.bt2').addEventListener('click',function(){
+            document.querySelector('.container').style.transform = 'translate(-100vw)';
+        })
+
+        document.querySelector('.bt3').addEventListener('click',function(){
+            document.querySelector('.container').style.transform = 'translate(-200vw)';
+        })
+
+        document.querySelector('.bt1').addEventListener('click',function(){
+            document.querySelector('.container').style.transform = 'translate(+300vw)';
+        })
+    </script>
+
+</body>
+</html>
